@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     && docker-php-ext-install pdo_mysql zip
 RUN apt-get install mc
+RUN apt-get install wine
 FROM nginx:latest
 FROM mysql:latest
 
