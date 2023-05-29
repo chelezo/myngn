@@ -1,15 +1,15 @@
 version: '3.3'
 services:
-php:
-  myngn:
-    image: chelezo/myngn
-    ports:
-      - 9191:80
-    volumes:
-      - './src:/var/www/html'
-      - './docker/nginx/conf.d:/etc/nginx/conf.d'
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-    volumes:
-      - './docker/volms/mysql:/var/lib/mysql'
+  php:
+    myngn:
+      image: chelezo/myngn
+      ports:
+        - 9191:80
+      volumes:
+        - './src:/var/www/html'
+        - './docker/nginx/conf.d:/etc/nginx/conf.d'
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+      volumes:
+        - './docker/volms/mysql:/var/lib/mysql'
 
