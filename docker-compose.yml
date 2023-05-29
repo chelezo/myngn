@@ -12,11 +12,11 @@ services:
       - 9191:80
     volumes:
       - './src:/var/www/html'
-      - './docker/nginx/conf.d:/etc/nginx/conf.d'
+      - './nginx/conf.d:/etc/nginx/conf.d'
 
   mysql:
     image: chelezo/myngn
     environment:
       - MYSQL_ROOT_PASSWORD=root
     volumes:
-      - './docker/volms/mysql:/var/lib/mysql'
+      - './volms/mysql:/var/lib/mysql'
