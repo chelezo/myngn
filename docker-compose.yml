@@ -1,13 +1,11 @@
 version: '3'
 services:
-  php:
+  nginx:
+    image: chelezo/myngn
     build:
       context: ./
     volumes:
       - './www:/var/www/html'
-
-  nginx:
-    image: chelezo/myngn
     ports:
       - 9191:80
     volumes:
