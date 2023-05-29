@@ -2,7 +2,7 @@ version: '3'
 services:
   php:
     build:
-      context: ./php-fpm
+      context: ./
     volumes:
       - './www:/var/www/html'
 
