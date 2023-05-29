@@ -2,7 +2,7 @@ version: '3'
 services:
   php:
     build:
-      context: ./docker/php
+      context: ./php-fpm
     volumes:
       - './www:/var/www/html'
 
@@ -19,4 +19,4 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
     volumes:
-      - './volms/mysql:/var/lib/mysql'
+      - './mysql:/var/lib/mysql'
