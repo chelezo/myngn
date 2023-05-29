@@ -1,4 +1,5 @@
 version: '3'
+service:
   nginx:
     image: chelezo/myngn:latest
     ports:
@@ -8,6 +9,6 @@ version: '3'
       - './docker/nginx/conf.d:/etc/nginx/conf.d'
       - './src:/var/www/html'
       - './docker/volms/mysql:/var/lib/mysql'
-environment:
+    environment:
       - MYSQL_ROOT_PASSWORD=root
       
