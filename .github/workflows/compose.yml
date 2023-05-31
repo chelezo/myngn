@@ -1,11 +1,11 @@
-name: docker-compose-actions-workflow
-on: push
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+name: docker-compose-actions-workflow #имя в actions
+on: push # что делаем? пушим!
+jobs: # задача (выполняем задачу)
+  test: # название задачи
+    runs-on: ubuntu-latest # под каким дистром выполняеться задача
+    steps: # логично шаги выполнения 
+      - uses: actions/checkout@v2 # делаем проверку 
       - name: Build the stack
-        run: docker-compose up -d
+        run: docker-compose up -d # выполняем команду на старт компосера
       - name: Test
-        run: docker run chelezo/mypr http://localhost:5000/
+        run: docker run chelezo/mypr http://localhost:5000/ # выполняем старт докера с указанием какой имейдж используем и параметры старта контейнера
